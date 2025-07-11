@@ -52,7 +52,10 @@ function isImportantProcess(proc) {
 }
 
 async function logSystemStats() {
-  const timestamp = new Date().toISOString();
+  const timestamp = new Date().toLocaleString('sv-SE', {
+    timeZone: 'Asia/Kolkata'
+  }).replace(' ', 'T');
+
   const portPidMap = getListeningPorts();
   const processes = await psList();
 
