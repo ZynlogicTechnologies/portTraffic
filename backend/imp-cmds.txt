@@ -1,0 +1,5 @@
+pm2 list                     # Show running apps
+pm2 restart monitor-logger   # Restart logger
+pm2 restart monitor-server   # Restart server
+pm2 logs monitor-logger      # View logs
+pm2 stop monitor-server      # Stop a process
